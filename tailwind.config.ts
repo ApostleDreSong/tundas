@@ -8,6 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "custom-grey": "#0B061D",
+        "custom-purple": "#6F4DFF",
+        "custom-lavender": '#F0EFF8'
+      },
+      borderRadius: {
+        'custom-30.4': '30.4px',
+      },
+      fontSize: {
+        'custom-16': '16px', // Define a custom font size
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
