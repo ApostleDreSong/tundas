@@ -11,18 +11,22 @@ const config: Config = {
       colors: {
         "custom-grey": "#0B061D",
         "custom-purple": "#6F4DFF",
-        "custom-lavender": '#F0EFF8'
+        "custom-lavender": "#F0EFF8",
       },
       borderRadius: {
-        'custom-30.4': '30.4px',
+        "custom-30.4": "30.4px",
       },
       fontSize: {
-        'custom-16': '16px', // Define a custom font size
+        "custom-16": "16px", // Define a custom font size
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "custom-one": "url('/one.png')",
+        "custom-two": "url('/two.png')",
+        "custom-three": "url('/three.png')",
+        "custom-four": "url('/four.png')",
       },
     },
   },
