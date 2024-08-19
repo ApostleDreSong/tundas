@@ -1,24 +1,30 @@
 "use client";
-import React, { FC } from 'react';
-import Image from 'next/image';
+import React, { FC } from "react";
+import Image from "next/image";
 
 // Define the props type
 interface TestimonialProps {
-    imageUrl: string;
-    title: string;
-    content: string;
+  imageUrl: string;
+  title: string;
+  content: string;
 }
 
 const Testimonial: FC<TestimonialProps> = ({ imageUrl, title, content }) => {
-    return (
-        <div style={{ backgroundColor: '#140D2B', borderRadius: '16px', marginRight: '20px', padding: '20px', color: 'white' }}>
-            <div className='flex'>
-                <Image src={imageUrl} alt={title} width={32} height={32} className="mb-6 md:mb-14 mr-1.5" />
-                <p>{title}</p>
-            </div>
-            <p>{content}</p>
-        </div>
-    );
+  return (
+    <div className="bg-[#140D2B] container rounded-lg p-5 mb-4 text-white w-full max-w-xs">
+      <div className="flex items-start mb-4">
+        <Image
+          src={imageUrl}
+          alt={title}
+          width={32}
+          height={32}
+          className="mr-1.5"
+        />
+        <p>{title}</p>
+      </div>
+      <p>{content}</p>
+    </div>
+  );
 };
 
 export default Testimonial;

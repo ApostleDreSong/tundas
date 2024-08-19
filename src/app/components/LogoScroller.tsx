@@ -1,14 +1,22 @@
 "use client";
-import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Image from 'next/image';
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const LogoScroller = () => {
-  const logos = ["/alliancepay.png", "/woodchip.png", "/safe.png", "/ercas.png", "/infoassure.png", "sayswitch.png"];
+  const logos = [
+    "/alliancepay.png",
+    "/woodchip.png",
+    "/safe.png",
+    "/ercas.png",
+    "/infoassure.png",
+    "sayswitch.png",
+  ];
   const settings = {
-    dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -20,8 +28,12 @@ const LogoScroller = () => {
   return (
     <Slider {...settings}>
       {logos.map((logo, index) => (
-        <div key={index}>
-          <img src={logo} alt={`Logo ${index + 1}`} style={{ width: '100px' }} />
+        <div key={index} className="pr-12">
+          <img
+            src={logo}
+            alt={`Logo ${index + 1}`}
+            style={{ width: "150px" }}
+          />
         </div>
       ))}
     </Slider>

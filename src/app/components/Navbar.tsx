@@ -10,8 +10,8 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="p-4 md:px-24 lg:px-36 bg-white">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="py-6 bg-white">
+      <div className="container flex justify-between items-center">
         <a href="/">
           <Image
             src="/tundas_logo.png"

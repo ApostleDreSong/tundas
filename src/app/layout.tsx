@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <div className=" pt-12 px-6 md:px-24 lg:px-36 bg-white" style={{borderRadius: '0px 0px 84px 84px'}}>
+        <div className="bg-white" style={{ borderRadius: "0px 0px 84px 84px" }}>
           {children}
         </div>
         <Footer />
