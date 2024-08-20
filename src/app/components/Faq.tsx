@@ -39,8 +39,8 @@ const Faq = () => {
   return (
     <Accordion style={{border: 'none'}}>
       {
-        items.map(item => (
-          <AccordionItem style={{marginBottom: '16px', border: 'none'}}>
+        items.map((item, index) => (
+          <AccordionItem key={index} style={{marginBottom: '16px', border: 'none'}}>
             <AccordionItemHeading>
               <AccordionItemButton style={{borderRadius: '16px'}}>{item.itemTitle}</AccordionItemButton>
             </AccordionItemHeading>
