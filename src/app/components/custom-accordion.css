@@ -1,0 +1,18 @@
+/* custom-accordion.css */
+
+/* Hide the default icons */
+.react-accessible-accordion .accordion__arrow {
+  display: none;
+}
+
+/* Custom styles for the icon */
+.accordion-icon {
+  font-size: 1.25rem; /* Adjust size as needed */
+  transition: transform 0.3s ease;
+}
+
+.react-accessible-accordion
+  .accordion__item[aria-expanded="true"]
+  .accordion-icon {
+  transform: rotate(45deg); /* Rotate the icon when expanded */
+}
