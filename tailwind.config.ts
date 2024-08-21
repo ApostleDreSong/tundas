@@ -53,6 +53,8 @@ const config: Config = {
         "team-member-2": "url('/team-member-2.png')",
         "team-member-3": "url('/team-member-3.png')",
         "team-member-4": "url('/team-member-4.png')",
+        "bg-pattern-1": "url('/bg-pattern-1.png')",
+        "bg-pattern-2": "url('/bg-pattern-2.png')",
       },
     },
   },
