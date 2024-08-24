@@ -1,13 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation"; // Import usePathname
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname(); // Use the usePathname hook
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  // Function to determine if a link is active
+  const isActive = (path: string) => pathname === path;
 
   return (
     <nav className="py-6 bg-white">
@@ -22,20 +27,26 @@ const Navbar: React.FC = () => {
         </a>
         <div className="hidden md:flex space-x-8">
           <a
-            href="#"
-            className="text-custom-grey hover:text-custom-purple font-normal"
+            href="/services"
+            className={`text-custom-grey hover:text-custom-purple font-normal ${
+              isActive("/services") ? "text-custom-purple" : ""
+            }`}
           >
             Services
           </a>
           <a
-            href="company"
-            className="text-custom-grey hover:text-custom-purple font-normal"
+            href="/company"
+            className={`text-custom-grey hover:text-custom-purple font-normal ${
+              isActive("/company") ? "text-custom-purple" : ""
+            }`}
           >
             About Us
           </a>
           <a
-            href="#"
-            className="text-custom-grey hover:text-custom-purple font-normal"
+            href="/faq"
+            className={`text-custom-grey hover:text-custom-purple font-normal ${
+              isActive("/faq") ? "text-custom-purple" : ""
+            }`}
           >
             FAQs
           </a>
@@ -43,8 +54,8 @@ const Navbar: React.FC = () => {
 
         <div className="hidden md:block">
           <a
-            href="#"
-            className="text-custom-grey text-custom-16 font-medium font-semibold bg-custom-lavender hover:bg-custom-lavender rounded-custom-30.4"
+            href="/contact-sales"
+            className="text-custom-grey text-custom-16 font-medium bg-custom-lavender hover:bg-custom-lavender rounded-custom-30.4"
             style={{ padding: "10px 20px" }}
           >
             Contact Sales
@@ -75,30 +86,36 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
+      {/* Mobile menu implementation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-4">
+        <div className="md:hidden">
           <a
-            href="#"
-            className="block text-custom-grey hover:text-custom-purple mb-2"
+            href="/services"
+            className={`block py-2 text-custom-grey hover:text-custom-purple ${
+              isActive("/services") ? "text-custom-purple" : ""
+            }`}
           >
             Services
           </a>
           <a
-            href="company"
-            className="block text-custom-grey hover:text-custom-purple mb-2"
+            href="/company"
+            className={`block py-2 text-custom-grey hover:text-custom-purple ${
+              isActive("/company") ? "text-custom-purple" : ""
+            }`}
           >
             About Us
           </a>
           <a
-            href="#"
-            className="block text-custom-grey hover:text-custom-purple mb-4"
+            href="/faq"
+            className={`block py-2 text-custom-grey hover:text-custom-purple ${
+              isActive("/faq") ? "text-custom-purple" : ""
+            }`}
           >
             FAQs
           </a>
           <a
-            href="#"
-            className="inline-block text-custom-grey text-custom-16 font-medium font-semibold bg-custom-lavender hover:bg-custom-lavender rounded-custom-30.4"
-            style={{ padding: "10px 20px" }}
+            href="/contact-sales"
+            className="block py-2 text-custom-grey hover:text-custom-purple"
           >
             Contact Sales
           </a>
@@ -109,3 +126,33 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
+// {isMobileMenuOpen && (
+//   <div className="md:hidden mt-4">
+//     <a
+//       href="#"
+//       className="block text-custom-grey hover:text-custom-purple mb-2"
+//     >
+//       Services
+//     </a>
+//     <a
+//       href="company"
+//       className="block text-custom-grey hover:text-custom-purple mb-2"
+//     >
+//       About Us
+//     </a>
+//     <a
+//       href="#"
+//       className="block text-custom-grey hover:text-custom-purple mb-4"
+//     >
+//       FAQs
+//     </a>
+//     <a
+//       href="#"
+//       className="inline-block text-custom-grey text-custom-16 font-medium font-semibold bg-custom-lavender hover:bg-custom-lavender rounded-custom-30.4"
+//       style={{ padding: "10px 20px" }}
+//     >
+//       Contact Sales
+//     </a>
+//   </div>
+// )}

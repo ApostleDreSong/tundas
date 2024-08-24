@@ -1,74 +1,87 @@
-import React from "react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
+"use client";
+import React, { useState } from "react";
 import "react-accessible-accordion/dist/fancy-example.css";
 import "./custom-accordion.css"; // Import custom CSS for icons
+import Image from "next/image";
 
-const items = [
+interface AccordionItemProps {
+  itemTitle: string;
+  itemDetails: string;
+}
+
+const items: AccordionItemProps[] = [
   {
-    itemTitle: "Accordion1",
-    itemDetails: "Details of Accordion 1",
+    itemTitle: "How do I get started with your services?",
+    itemDetails:
+      "Use the contact sales button to schedule an initial consultation",
   },
   {
-    itemTitle: "Accordion1",
-    itemDetails: "Details of Accordion 1",
+    itemTitle: "What type of business do you work with?",
+    itemDetails:
+      "We work with businesses of all sizes and industries, from startups to large enterprises.",
   },
   {
-    itemTitle: "Accordion1",
-    itemDetails: "Details of Accordion 1",
+    itemTitle: "Can your solution be customised for my business?",
+    itemDetails:
+      "Yes, our solutions are tailored to meet your specific business needs.",
   },
   {
-    itemTitle: "Accordion1",
-    itemDetails: "Details of Accordion 1",
+    itemTitle: "Do you provide support after implementation?",
+    itemDetails: "Yes, we offer ongoing support and maintenance.",
   },
   {
-    itemTitle: "Accordion1",
-    itemDetails: "Details of Accordion 1",
+    itemTitle: "How do you handle compliance with industry regulations?",
+    itemDetails:
+      "We ensure all solutions comply with latest industry regulations and offer compliance consulting.",
   },
   {
-    itemTitle: "Accordion1",
-    itemDetails: "Details of Accordion 1",
+    itemTitle: "How do I request a demo of your services?",
+    itemDetails:
+      "Use the contact sales button to request a demo of our services.",
   },
 ];
 
-const Faq = () => {
+const Faq: React.FC = () => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const handleAccordionClick = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
-    // <Accordion style={{border: 'none'}}>
-    //   {
-    //     items.map((item, index) => (
-    //       <AccordionItem key={index} style={{marginBottom: '16px', border: 'none'}}>
-    //         <AccordionItemHeading>
-    //           <AccordionItemButton style={{borderRadius: '16px'}}>{item.itemTitle}</AccordionItemButton>
-    //         </AccordionItemHeading>
-    //         <AccordionItemPanel>
-    //           <p>{item.itemDetails}</p>
-    //         </AccordionItemPanel>
-    //       </AccordionItem>
-    //     ))
-    //   }
-    // </Accordion>
-    <Accordion className="space-y-4">
+    <div className="space-y-4">
       {items.map((item, index) => (
-        <AccordionItem key={index} className="border-none">
-          <AccordionItemHeading>
-            <AccordionItemButton className="flex items-center justify-between w-full p-4 text-left bg-gray-100 rounded-lg hover:bg-gray-200">
-              <span>{item.itemTitle}</span>
-              <div className="bg-custom-grey rounded-full h-8 w-8 text-center">
-                <span className="accordion-icon text-white">+</span>
-              </div>
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel className="p-4 bg-gray-50">
-            <p>{item.itemDetails}</p>
-          </AccordionItemPanel>
-        </AccordionItem>
+        <div key={index} className="">
+          <div
+            onClick={() => handleAccordionClick(index)}
+            className="rounded-t-2xl rounded-b-sm flex items-center justify-between w-full p-8 text-left bg-gray-100 hover:bg-gray-200 cursor-pointer"
+          >
+            <span className="text-lg font-medium text-custom-grey">
+              {item.itemTitle}
+            </span>
+            <div className="bg-custom-grey rounded-full h-8 w-8 text-center flex items-center justify-center">
+              <span className="accordion-icon text-white">
+                {expandedIndex === index ? (
+                  <Image
+                    src={"/cancel-icon.svg"}
+                    alt="Cancel"
+                    width={10.61}
+                    height={10.61}
+                  />
+                ) : (
+                  "+"
+                )}
+              </span>
+            </div>
+          </div>
+          {expandedIndex === index && (
+            <div className="p-8 text-[#434960] font-normal text-base bg-gray-100 rounded-b-2xl">
+              <p>{item.itemDetails}</p>
+            </div>
+          )}
+        </div>
       ))}
-    </Accordion>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import LogoScroller from "./components/LogoScroller";
 
 const ReadMore = ({
@@ -15,7 +15,7 @@ const ReadMore = ({
 }) => {
   return (
     <div
-      className="flex"
+      className="flex rounded-2xl hover:scale-105"
       style={{ borderWidth: "1px", borderColor: "#E4E9F1", padding: "32px" }}
     >
       <Image
@@ -27,9 +27,12 @@ const ReadMore = ({
         style={{ marginRight: "32px", width: "32px", height: "32px" }}
       />
       <div>
-        <p style={{ marginBottom: "20px" }}>{title}</p>
-        <p style={{ marginBottom: "8px" }}>{text}</p>
-        <a href="" className="flex items-center">
+        <p className="font-semibold text-xl text-custom-grey mb-5">{title}</p>
+        <p className="mb-2 font-normal text-base text-custom-body">{text}</p>
+        <a
+          href=""
+          className="flex items-center text-base font-semibold text-custom-grey"
+        >
           Read more
           <ArrowRightIcon
             className="text-black"
@@ -56,7 +59,7 @@ export default function Home() {
             <br />
             Businesses
           </p>
-          <p className="text-lg mb-8" style={{ lineHeight: "26px" }}>
+          <p className="text-lg mb-8 font-normal text-custom-body">
             Experience hassle-free transactions with our
             <br /> seamless payment solutions. We provide fast, secure,
             <br /> and reliable payment services tailored to your
@@ -67,12 +70,17 @@ export default function Home() {
               className="bg-white flex justify-center items-center"
               style={{ width: "40px", height: "40px", borderRadius: "100px" }}
             >
-              <ArrowRightIcon
-                className="text-custom-purple"
-                style={{ width: "20px", height: "20px" }}
+              <Image
+                src="/arrow-right.png"
+                alt="arrow"
+                width={16}
+                height={15.56}
+                className=""
               />
             </div>
-            <span className="ml-2 text-white">Contact sales</span>
+            <span className="ml-2 text-white text-lg font-medium">
+              Contact sales
+            </span>
           </div>
         </div>
         <Image
@@ -84,7 +92,9 @@ export default function Home() {
         />
       </div>
       <div id="trust" className="pt-[7.5rem]">
-        <p className="pb-4">Trusted by companies around the world</p>
+        <p className="pb-4 text-custom-body">
+          Trusted by companies around the world
+        </p>
         <LogoScroller />
         <section className="pt-[8.75rem] pb-[7.5rem]">
           <p className="mb-8 text-5xl font-bold">Our Services</p>
@@ -99,33 +109,35 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row">
             <div className="lg:w-[50%]"></div>
             <div className="w-full lg:w-[50%]">
-              Engineered Solutions to Simplify Your Business Processes.
-              Streamline operations, improve efficiency, and enhance
-              productivity.
+              <p className="font-normal text-lg text-custom-body">
+                Engineered Solutions to Simplify Your Business Processes.
+                Streamline operations, improve efficiency, and enhance
+                productivity.
+              </p>
             </div>
           </div>
           <div className="pt-[3.375rem] grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                iconurl: "/payment_integration.png",
+                iconurl: "/payment_integration.svg",
                 title: "Payment System Integration",
                 text: "Seamlessly integrate cutting-edge payment systems. Our team works closely with you to ensure smooth implementation with no disruption.",
                 link: "",
               },
               {
-                iconurl: "/payment_consulting.png",
+                iconurl: "/payment_consulting.svg",
                 title: "Payment Strategy Consulting",
                 text: "We deliver expert consulting to craft and implement a customised payment strategy, optimising your payment processes and boosting growth.",
                 link: "",
               },
               {
-                iconurl: "/fraud_prevention.png",
+                iconurl: "/fraud_prevention.svg",
                 title: "Fraud Prevention & Risk Management",
                 text: "Minimise risk with our advanced fraud prevention & management. Our innovative technologies ensure the safety and integrity of your payment processes.",
                 link: "",
               },
               {
-                iconurl: "/security.png",
+                iconurl: "/security.svg",
                 title: "Security & Compliance Solution",
                 text: "We offer thorough security assessments and compliance, helping you maintain the highest standards of data protection and adherence.",
                 link: "",

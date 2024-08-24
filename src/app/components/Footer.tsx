@@ -1,35 +1,22 @@
 "use client";
 import React from "react";
-import {
-  ArrowRightIcon,
-  EnvelopeIcon,
-  PhoneIcon,
-} from "@heroicons/react/24/outline";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import TestimonialScroller from "./TestimonialScroller";
 import Faq from "./Faq";
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-custom-grey flex flex-col pt-12 container">
-      <p
-        className="mb-8 text-white"
-        style={{ fontSize: "48px", fontWeight: 700, lineHeight: "54px" }}
-      >
-        Success Stories
-      </p>
-      <hr
-        style={{
-          borderColor: "white",
-          width: "100%",
-          height: "1px",
-          marginBottom: "32px",
-        }}
-      />
+    <div className="bg-custom-grey flex flex-col pt-[6.50rem] container">
+      <p className="mb-8 text-white text-5xl font-bold">Success Stories</p>
+      <hr className="mb-8 w-full border-[#A6A1BA]" />
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-[50%]"></div>
         <div className="w-full lg:w-[50%]">
-          <p className="mb-13 text-white" style={{ marginBottom: "54px" }}>
+          <p
+            className="mb-13 text-[#A6A1BA] text-lg font-normal"
+            style={{ marginBottom: "54px" }}
+          >
             Discover how businesses like yours have transformed their payment
             systems with Tundas Technology.
           </p>
@@ -43,17 +30,10 @@ const Footer: React.FC = () => {
         className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-[84px] p-10 md:p-[120px] ml-0 mr-0 md:ml-[-144px] md:mr-[-144px]"
       >
         <div>
-          <p
-            style={{
-              fontSize: "48px",
-              lineHeight: "54px",
-              fontWeight: 700,
-              marginBottom: "20px",
-            }}
-          >
+          <p className="text-5xl font-bold pb-5 text-[#0A002E]">
             Frequently Asked <br /> Questions
           </p>
-          <p style={{ marginBottom: "32px" }}>
+          <p className="pb-8 text-[#35313F] font-normal text-lg">
             Get answers to commonly asked questions
           </p>
           <div
@@ -64,33 +44,38 @@ const Footer: React.FC = () => {
               className="bg-custom-grey flex justify-center items-center"
               style={{ width: "40px", height: "40px", borderRadius: "100px" }}
             >
-              <ArrowRightIcon
-                className="text-white"
-                style={{ width: "20px", height: "20px" }}
+              <Image
+                src={"/arrow-right-gray.svg"}
+                alt="arrow-right"
+                width={13.33}
+                height={12.96}
               />
             </div>
-            <span className="ml-2">Contact sales</span>
+            <span className="ml-3 text-lg text-custom-grey font-medium">
+              Contact sales
+            </span>
           </div>
         </div>
         <div>
           <Faq />
         </div>
       </div>
-      <p
-        className="text-white text-center text-4xl md:text-6xl font-bold mb-8 md:mb-11"
-        style={{ marginTop: "96px" }}
-      >
-        Let’s Help You Grow <br className="block md:hidden" /> Your Business
-      </p>
+      <div className="flex flex-row items-center justify-center">
+        <p className="text-white text-center lg:leading-[68px] mt-24 text-4xl md:text-6xl font-bold mb-8 md:mb-11 lg:w-[60%]">
+          Let’s Help You Grow Your Business
+        </p>
+      </div>
       <div className="flex justify-center mb-8">
         <div className="flex justify-center items-center bg-white rounded-custom-30.4 p-2 pr-6">
           <div
             className="bg-custom-grey flex justify-center items-center"
             style={{ width: "40px", height: "40px", borderRadius: "100px" }}
           >
-            <ArrowRightIcon
-              className="text-white"
-              style={{ width: "20px", height: "20px" }}
+            <Image
+              src={"/arrow-right-gray.svg"}
+              alt="arrow-right"
+              width={13.33}
+              height={12.96}
             />
           </div>
           <span className="ml-2">Contact sales</span>
@@ -102,7 +87,7 @@ const Footer: React.FC = () => {
           width: "100%",
           height: "1px",
           marginTop: "48px",
-          marginBottom: "48px",
+          marginBottom: "96px",
         }}
       />
       <div className="flex flex-col md:flex-row justify-between">
@@ -110,35 +95,37 @@ const Footer: React.FC = () => {
           <Image
             src="/tundas_logo_name.png"
             alt="Tundas Logo"
-            width={145}
-            height={39}
+            width={188.69}
+            height={53.87}
             className="mb-6 md:mb-14"
           />
-          <p className="text-white text-base font-semibold mb-4">
+          <p className="text-[#A6A1BA] text-base font-semibold mb-4">
             Get in touch
           </p>
-          <div className="mb-2">
+          <div className="mb-2 text-base font-normal">
             <EnvelopeIcon className="inline w-6 h-6 text-white mr-3" />
             <span className="text-white">tundastechinnovation@gmail.com</span>
           </div>
-          <div>
+          <div className="text-base font-normal">
             <PhoneIcon className="inline w-6 h-6 text-white mr-3" />
             <span className="text-white">070-TUNDAS-00</span>
           </div>
         </div>
         <div className="mb-8 md:mb-0">
-          <p className="text-white mb-4">Who we are</p>
-          <p className="text-white mb-2">About Us</p>
-          <p className="text-white mb-2">FAQs</p>
-          <p className="text-white mb-2">Twitter [Formerly X]</p>
-          <p className="text-white">LinkedIn</p>
+          <p className="text-white mb-6 font-semibold text-base">Who we are</p>
+          <p className="mb-6 text-[#A6A1BA]">About Us</p>
+          <p className="mb-6 text-[#A6A1BA]">FAQs</p>
+          <p className="mb-6 text-[#A6A1BA]">Twitter [Formerly X]</p>
+          <p className="text-[#A6A1BA]">LinkedIn</p>
         </div>
         <div>
-          <p className="text-white mb-4">What We Do</p>
-          <p className="text-white mb-2">Payment System Integration</p>
-          <p className="text-white mb-2">Payment Strategy Consulting</p>
-          <p className="text-white mb-2">Fraud Prevention & Risk Management</p>
-          <p className="text-white">Security & Compliance Solution</p>
+          <p className="text-white mb-6 font-semibold text-base">What We Do</p>
+          <p className="text-[#A6A1BA] mb-6">Payment System Integration</p>
+          <p className="text-[#A6A1BA] mb-6">Payment Strategy Consulting</p>
+          <p className="text-[#A6A1BA] mb-6">
+            Fraud Prevention & Risk Management
+          </p>
+          <p className="text-[#A6A1BA]">Security & Compliance Solution</p>
         </div>
       </div>
       <hr
@@ -146,11 +133,11 @@ const Footer: React.FC = () => {
           borderColor: "#3C384D",
           width: "100%",
           height: "1px",
-          marginTop: "48px",
-          marginBottom: "24px",
+          marginTop: "96px",
+          marginBottom: "48px",
         }}
       />
-      <p className="text-white text-center text-sm md:text-base mb-10">
+      <p className="text-[#A6A1BA] text-left text-sm mb-10">
         <span className="block md:inline mr-0 md:mr-14 mb-2 md:mb-0">
           © 2024 Tundas Technology Innovation Limited. All Rights Reserved
         </span>
@@ -164,4 +151,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-// px-6 md:px-24 lg:px-36

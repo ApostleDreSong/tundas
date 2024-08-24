@@ -11,18 +11,12 @@ interface TestimonialProps {
 
 const Testimonial: FC<TestimonialProps> = ({ imageUrl, title, content }) => {
   return (
-    <div className="bg-[#140D2B] container rounded-lg p-5 mb-4 text-white w-full max-w-xs">
-      <div className="flex items-start mb-4">
-        <Image
-          src={imageUrl}
-          alt={title}
-          width={32}
-          height={32}
-          className="mr-1.5"
-        />
-        <p>{title}</p>
+    <div className="bg-[#140D2B] container rounded-2xl p-5 h-[10.5625rem] text-white w-full max-w-xs">
+      <div className="flex flex-row items-center gap-2 pb-2">
+        <Image src={imageUrl} alt={title} width={32} height={32} className="" />
+        <p className="text-white text-sm font-medium">{title}</p>
       </div>
-      <p>{content}</p>
+      <p className="text-[#A6A1BA] font-normal text-sm">{content}</p>
     </div>
   );
 };

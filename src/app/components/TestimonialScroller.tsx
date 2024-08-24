@@ -16,27 +16,27 @@ const TestimonialScroller = () => {
     },
     {
       imageUrl: "/leslie_testimonial.png",
-      title: "Leslie Alexander",
+      title: "Darl Robertson",
       content:
-        "Their seamless integration and proactive support have ensured our payment processes are efficient and secure.",
+        "Tundas innovative technologies and best practices have minimised our fraud risk and ensured our payment processes are smooth and secure.",
     },
     {
       imageUrl: "/leslie_testimonial.png",
-      title: "Leslie Alexander",
+      title: "Jenny Wilson",
       content:
-        "Their seamless integration and proactive support have ensured our payment processes are efficient and secure.",
+        "We’ve streamlined our payment systems effortlessly. their team’s expertise & dedication to our success have made all the difference.",
     },
     {
       imageUrl: "/leslie_testimonial.png",
-      title: "Leslie Alexander",
+      title: "Wade Warren",
       content:
-        "Their seamless integration and proactive support have ensured our payment processes are efficient and secure.",
+        "Our partnership with Tundas has transformed our payment systems. Their expert guidance have ensured our transactions are efficient & secure.",
     },
     {
       imageUrl: "/leslie_testimonial.png",
-      title: "Leslie Alexander",
+      title: "Savannah Nguyen",
       content:
-        "Their seamless integration and proactive support have ensured our payment processes are efficient and secure.",
+        "Tundas has been a reliable partner in upgrading our payment systems. their thorough approach & support have significantly improved our operations.",
     },
   ];
   const settings = {

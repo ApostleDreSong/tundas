@@ -32,7 +32,8 @@ const LogoScroller = () => {
           <img
             src={logo}
             alt={`Logo ${index + 1}`}
-            style={{ width: "150px" }}
+            style={{ width: "140px", height: "50px" }}
+            // className="w-2/3"
           />
         </div>
       ))}

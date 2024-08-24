@@ -22,8 +22,10 @@ const config: Config = {
       colors: {
         "custom-grey": "#0B061D",
         "custom-purple": "#6F4DFF",
+        "custom-purple-arrow": "#7857FF",
         "custom-lavender": "#F0EFF8",
         "custom-lavender-l": "#CEC2FF",
+        "custom-body": "#353241",
       },
       borderRadius: {
         "custom-30.4": "30.4px",
@@ -54,7 +56,7 @@ const config: Config = {
         "team-member-3": "url('/team-member-3.png')",
         "team-member-4": "url('/team-member-4.png')",
         "bg-pattern-1": "url('/bg-pattern-1.png')",
-        "bg-pattern-2": "url('/bg-pattern-2.png')",
+        "bg-pattern-2": "url('/bg-pattern-2.svg')",
       },
     },
   },
