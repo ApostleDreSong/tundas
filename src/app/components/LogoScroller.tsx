@@ -7,12 +7,12 @@ import Image from "next/image";
 
 const LogoScroller = () => {
   const logos = [
-    "/alliancepay.png",
-    "/woodchip.png",
-    "/safe.png",
-    "/ercas.png",
-    "/infoassure.png",
-    "sayswitch.png",
+    "/alliancepay.svg",
+    "/woodchip.svg",
+    "/safe.svg",
+    "/ercas.svg",
+    "/infoassure.svg",
+    "/sayswitch.svg",
   ];
   const settings = {
     dots: false,
@@ -29,12 +29,15 @@ const LogoScroller = () => {
     <Slider {...settings}>
       {logos.map((logo, index) => (
         <div key={index} className="pr-12">
-          <img
-            src={logo}
-            alt={`Logo ${index + 1}`}
-            style={{ width: "140px", height: "50px" }}
-            // className="w-2/3"
-          />
+          <div className="text-center">
+            <Image
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              width={140}
+              height={10}
+              objectFit="contain"
+            />
+          </div>
         </div>
       ))}
     </Slider>

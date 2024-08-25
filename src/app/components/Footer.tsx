@@ -2,70 +2,56 @@
 import React from "react";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import TestimonialScroller from "./TestimonialScroller";
 import Faq from "./Faq";
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-custom-grey flex flex-col pt-[6.50rem] container">
-      <p className="mb-8 text-white text-5xl font-bold">Success Stories</p>
-      <hr className="mb-8 w-full border-[#A6A1BA]" />
-      <div className="flex flex-col lg:flex-row">
-        <div className="lg:w-[50%]"></div>
-        <div className="w-full lg:w-[50%]">
-          <p
-            className="mb-13 text-[#A6A1BA] text-lg font-normal"
-            style={{ marginBottom: "54px" }}
-          >
-            Discover how businesses like yours have transformed their payment
-            systems with Tundas Technology.
-          </p>
-        </div>
-      </div>
-      <div className="mb-24 ml-0 mr-0 md:ml-[-144px] md:mr-[-144px]">
-        <TestimonialScroller />
-      </div>
-      <div
-        id="faq"
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-[84px] p-10 md:p-[120px] ml-0 mr-0 md:ml-[-144px] md:mr-[-144px]"
-      >
-        <div>
-          <p className="text-5xl font-bold pb-5 text-[#0A002E]">
-            Frequently Asked <br /> Questions
-          </p>
-          <p className="pb-8 text-[#35313F] font-normal text-lg">
-            Get answers to commonly asked questions
-          </p>
-          <div
-            className="inline-flex items-center rounded-custom-30.4 p-2 pr-6"
-            style={{ backgroundColor: "#F0F1F8" }}
-          >
+    <div className="bg-custom-grey flex flex-col">
+      {/* pt-[6.50rem] */}
+      <div className="bg-white rounded-b-[5.25rem]">
+        <div
+          id="faq"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 container py-[7.5rem]"
+        >
+          {/* rounded-[84px] */}
+          <div>
+            <p className="text-5xl font-bold pb-5 text-[#0A002E]">
+              Frequently Asked <br /> Questions
+            </p>
+            <p className="pb-8 text-[#35313F] font-normal text-lg">
+              Get answers to commonly asked questions
+            </p>
             <div
-              className="bg-custom-grey flex justify-center items-center"
-              style={{ width: "40px", height: "40px", borderRadius: "100px" }}
+              className="inline-flex items-center rounded-custom-30.4 p-2 pr-6"
+              style={{ backgroundColor: "#F0F1F8" }}
             >
-              <Image
-                src={"/arrow-right-gray.svg"}
-                alt="arrow-right"
-                width={13.33}
-                height={12.96}
-              />
+              <div
+                className="bg-custom-grey flex justify-center items-center"
+                style={{ width: "40px", height: "40px", borderRadius: "100px" }}
+              >
+                <Image
+                  src={"/arrow-right-gray.svg"}
+                  alt="arrow-right"
+                  width={13.33}
+                  height={12.96}
+                />
+              </div>
+              <span className="ml-3 text-lg text-custom-grey font-medium">
+                Contact sales
+              </span>
             </div>
-            <span className="ml-3 text-lg text-custom-grey font-medium">
-              Contact sales
-            </span>
           </div>
-        </div>
-        <div>
-          <Faq />
+          <div>
+            <Faq />
+          </div>
         </div>
       </div>
       <div className="flex flex-row items-center justify-center">
-        <p className="text-white text-center lg:leading-[68px] mt-24 text-4xl md:text-6xl font-bold mb-8 md:mb-11 lg:w-[60%]">
+        <p className="text-white text-center lg:leading-[68px] mt-24 text-4xl md:text-6xl font-bold mb-8 md:mb-11 lg:w-[50%]">
           Let’s Help You Grow Your Business
         </p>
       </div>
-      <div className="flex justify-center mb-8">
+      <div className="flex justify-center mb-8 container">
         <div className="flex justify-center items-center bg-white rounded-custom-30.4 p-2 pr-6">
           <div
             className="bg-custom-grey flex justify-center items-center"
@@ -82,15 +68,16 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <hr
+        className="container"
         style={{
           borderColor: "#3C384D",
-          width: "100%",
+          width: "80%",
           height: "1px",
           marginTop: "48px",
           marginBottom: "96px",
         }}
       />
-      <div className="flex flex-col md:flex-row justify-between">
+      <div className="container flex flex-col md:flex-row justify-between">
         <div className="mb-8 md:mb-0">
           <Image
             src="/tundas_logo_name.png"
@@ -129,15 +116,16 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <hr
+        className="container"
         style={{
           borderColor: "#3C384D",
-          width: "100%",
+          width: "80%",
           height: "1px",
           marginTop: "96px",
           marginBottom: "48px",
         }}
       />
-      <p className="text-[#A6A1BA] text-left text-sm mb-10">
+      <p className="container text-[#A6A1BA] text-left text-sm mb-10">
         <span className="block md:inline mr-0 md:mr-14 mb-2 md:mb-0">
           © 2024 Tundas Technology Innovation Limited. All Rights Reserved
         </span>

@@ -54,9 +54,9 @@ const Faq: React.FC = () => {
         <div key={index} className="">
           <div
             onClick={() => handleAccordionClick(index)}
-            className="rounded-t-2xl rounded-b-sm flex items-center justify-between w-full p-8 text-left bg-gray-100 hover:bg-gray-200 cursor-pointer"
+            className="rounded-t-2xl rounded-b-sm flex items-center justify-between w-full p-3 lg:p-8 text-left bg-gray-100 hover:bg-gray-200 cursor-pointer"
           >
-            <span className="text-lg font-medium text-custom-grey">
+            <span className="w-[85%] lg:w-full text-lg font-medium text-custom-grey">
               {item.itemTitle}
             </span>
             <div className="bg-custom-grey rounded-full h-8 w-8 text-center flex items-center justify-center">
@@ -75,7 +75,7 @@ const Faq: React.FC = () => {
             </div>
           </div>
           {expandedIndex === index && (
-            <div className="p-8 text-[#434960] font-normal text-base bg-gray-100 rounded-b-2xl">
+            <div className="p-3 lg:p-8 text-[#434960] font-normal text-base bg-gray-100 rounded-b-2xl">
               <p>{item.itemDetails}</p>
             </div>
           )}
