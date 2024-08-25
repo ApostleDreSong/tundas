@@ -48,7 +48,7 @@ const ReadMore = ({
 export default function Home() {
   return (
     <>
-      <div className="bg-custom-grey">
+      <div className="bg-custom-grey pt-[5.5rem]">
         <div className="rounded-b-[5.25rem] bg-white">
           <div className="container">
             <div className="pt-12 flex flex-col gap-16 lg:gap-0 lg:flex-row items-center justify-between">

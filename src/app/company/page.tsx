@@ -4,7 +4,7 @@ import SuccessStories from "../components/SuccessStories";
 export default function Home() {
   return (
     <>
-      <div className="">
+      <div className="pt-[5.5rem]">
         <div className="flex flex-col items-center pt-20 pb-20 lg:pb-60 bg-bg-pattern-1 bg-no-repeat bg-center">
           <p className="w-full lg:w-[60%] text-custom-grey text-center text-4xl lg:text-6xl lg:leading-[68px] font-bold pb-6">
             We are Crafting Digital Payment Experiences
